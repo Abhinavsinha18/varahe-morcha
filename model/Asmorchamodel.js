@@ -1,0 +1,41 @@
+const mongoose = require('mongoose');
+
+let schema = mongoose.Schema({
+    member_name: {
+        type :String,
+        required: true
+    },
+    member_contact_number: {
+        type :Number,
+        required: true
+    },
+    member_id: {
+        type :String,
+        required: true
+    },
+    religion: {
+        type :String,
+        required: true
+    },
+    loksabha_name: {
+        type :String,
+        required: true
+    },
+    submited_by: {
+        type :String,
+        required: true
+    },
+    contact_number: {
+        type :String,
+        required: true
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+      }
+})
+
+
+const ASmorchaModel =  mongoose.model('asMorcha',schema);
+
+module.exports = ASmorchaModel;
