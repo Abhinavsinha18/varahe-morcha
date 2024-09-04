@@ -36,6 +36,6 @@ let schema = mongoose.Schema({
 })
 
 
-const ASmorchaModel =  mongoose.model('asMorcha',schema);
+const asmorchaModel =  mongoose.model('asMorcha',schema);
 
-module.exports = ASmorchaModel;
+module.exports = asmorchaModel;

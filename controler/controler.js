@@ -1,6 +1,6 @@
 // const { default: app } = require("../config/firebase");
 const connect = require("../database/db");
-const ASmorchaModel = require("../model/asmorchamodel");
+const asmorchaModel = require("../model/modelmorchaas");
 const Model = require("../model/model");
 const Statemodel = require("../model/statemodel");
 
@@ -32,7 +32,7 @@ const GetState = async (req, res) => {
 
 const PostRecord = async (req, res) => {
   try {
-    const data = new ASmorchaModel(req.body);
+    const data = new asmorchaModel(req.body);
     await data.save();
     res.status(201).json({ message: "Data Created", Status: true, data });
   } catch (error) {
