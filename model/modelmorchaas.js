@@ -9,7 +9,7 @@ let schema = mongoose.Schema({
         type :Number,
         required: true
     },
-    member_id: {
+    primary_member_id: {
         type :String,
         required: true
     },
@@ -21,11 +21,11 @@ let schema = mongoose.Schema({
         type :String,
         required: true
     },
-    submited_by: {
+    primary_member_name: {
         type :String,
         required: true
     },
-    contact_number: {
+    primary_contact_number: {
         type :Number,
         required: true
     },
