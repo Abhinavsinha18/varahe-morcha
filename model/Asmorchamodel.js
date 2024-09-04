@@ -26,7 +26,7 @@ let schema = mongoose.Schema({
         required: true
     },
     contact_number: {
-        type :String,
+        type :Number,
         required: true
     },
     createdAt: {
