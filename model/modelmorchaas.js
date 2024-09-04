@@ -13,6 +13,10 @@ let schema = mongoose.Schema({
         type :String,
         required: true
     },
+    new_member_id: {
+        type :String,
+        required: true
+    },
     religion: {
         type :String,
         required: true
