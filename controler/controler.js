@@ -44,7 +44,7 @@ const PostRecord = async (req, res) => {
 
 
 const PostKishanMorcha = async (req, res) => {
-  console.log("object");
+  // console.log("object");
   try {
     const data = new kishanmorchamodel(req.body);
     await data.save();
