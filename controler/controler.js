@@ -40,7 +40,11 @@ const PostRecord = async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 };
+
+
+
 const PostKishanMorcha = async (req, res) => {
+  console.log("object");
   try {
     const data = new kishanmorchamodel(req.body);
     await data.save();
@@ -55,5 +59,6 @@ const PostKishanMorcha = async (req, res) => {
 module.exports = {
   GetRecords,
   PostRecord,
+  PostKishanMorcha,
   GetState
 };
