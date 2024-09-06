@@ -4,6 +4,7 @@ const asmorchaModel = require("../model/modelmorchaas");
 const Model = require("../model/model");
 const Statemodel = require("../model/statemodel");
 const kishanmorchamodel = require("../model/kishanmorchamodel");
+const obcmorchamodel = require("../model/objcmorchamodel");
 
 
 const GetRecords = async (req, res) => {
@@ -53,6 +54,16 @@ const PostKishanMorcha = async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 };
+const PostObcMocrcha = async (req, res) => {
+  // console.log("object");
+  try {
+    const data = new obcmorchamodel(req.body);
+    await data.save();
+    res.status(201).json({ message: "Data Created", Status: true, data });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
 
 
 
@@ -60,5 +71,6 @@ module.exports = {
   GetRecords,
   PostRecord,
   PostKishanMorcha,
-  GetState
+  GetState,
+  PostObcMocrcha
 };
